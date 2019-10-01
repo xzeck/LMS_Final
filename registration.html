@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+  <link rel="stylesheet" href="registration.css">
+  <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Registration Page</title>
+</head>
+
+<body>
+  <div class="main">
+	<center>
+	<img id="Image1" src="Images/users.png" style="height:100px;width:100px;">    
+	</center>
+	<p class="sign" align="center">User Registration</p>
+      <form class="form1" method="GET" action="registrationNew.php">
+      <input id="fname" name="fname" class="fname " type="text" align="center" placeholder="First Name" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'">
+      <input id="uname" name="uname" class="un " type="text" align="center" placeholder="New Username" onfocus="this.placeholder=''" onblur="this.placeholder='New Username'">
+      <input id="mail" name="email" class="mail" type="text" align="center" placeholder="Email Id" onfocus="this.placeholder=''" onblur="this.placeholder='Email Id'">
+      <input id="dept" name="dptmt" class="dept" type="text" align="center" placeholder="Department" onfocus="this.placeholder=''" onblur="this.placeholder='Department'">
+      <input id="pswrd" name="pswrd" class="pass" type="password" align="center" placeholder="New Password" onfocus="this.placeholder=''" onblur="this.placeholder='New Password'">
+      <button class="submit" align="center" onclick=validate()>Sign Up</button>
+      
+   </div>
+     
+</body>
+
+</html>

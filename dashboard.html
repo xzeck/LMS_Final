@@ -1,0 +1,56 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/sample.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="#">Apply Leave</a></li>
+            <li><a href="#">Leave Balance</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+  <center>
+  <img id="Image1" src="Images/PIIT.png" style="height:100px;width:100px;">    
+  </center>
+  <p class="sign" align="center">Leave Management System</p>
+      <input class="datefilter" type="text" name="datefilter" align ="center" value="" placeholder="Choose From and To Date" onfocus="this.placeholder=''" onblur="this.placeholder='Choose From and To Date'"/>
+      <br>
+         <input class="reason " type="text" align="center" placeholder="Reason for Leave" onfocus="this.placeholder=''" onblur="this.placeholder='Reason for Leave'">
+        <a class="submit" align="center">Submit</a>
+
+
+
+<script type="text/javascript">
+    $(function() {
+
+      $('input[name="datefilter"]').daterangepicker({
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+
+      $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+      });
+
+      $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+
+    });
+</script>
+        
+                
+    </div>
+<body>
+
+</html>
